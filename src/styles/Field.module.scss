@@ -1,0 +1,89 @@
+
+
+.field{
+    margin-top: 150px;
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        .game_field{
+            width: 100%;
+            background-color:rgb(27, 27, 27);
+            border-radius: 30px;
+            .game_field_row{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 20px 15px;
+                .card, .card_active{
+                overflow: visible;
+                width: 190px;
+                height: 254px;
+                margin: 10px;
+
+                .content {
+                    width: 100%;
+                    height: 100%;
+                    transform-style: preserve-3d;
+                    transition: transform 300ms;
+                    box-shadow: 0px 0px 10px 1px #000000ee;
+                    border-radius: 5px;
+                    .front, .back {
+                        background-color: #151515;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        border-radius: 5px;
+                        overflow: hidden;
+                    }
+                      
+                    .back {
+                        width: 100%;
+                        height: 100%;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                        .back_content {
+                            position: absolute;
+                            width: 99%;
+                            height: 99%;
+                            background-color: #151515;
+                            border-radius: 5px;
+                            color: white;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 30px;
+                        }
+                    }
+
+                      
+                    .front {
+                        transform: rotateY(180deg);
+                        color: white;
+                        .front .img {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                          }
+                    }
+                      
+                      
+                }
+            }
+            }
+        }
+    }
+}
+
+
+.card_active .content{
+    transform: rotateY(180deg);
+    
+}
