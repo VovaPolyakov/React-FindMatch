@@ -3,21 +3,19 @@ import styles from '../../styles/Field.module.scss'
 import {cards} from '../cards/cards'
 import { useState } from 'react'
 import classNames from 'classnames/bind';
+import Card from './Card'
 
-let cx = classNames.bind(styles);
 
 const Gamefield = () => {
-    const [active,setActive] = useState()
+    const [show,setShow] = useState({})
 
-    let card = cx({
-        card:active,
-        card_active:!active,
-      });
     const handleClick = (e) => {
-        console.log(e.currentTarget.id)
-        if(e.currentTarget.classList.contains(card)){
-            setActive(e.currentTarget.id)
-        }
+            if(!e.currentTarget.classList.contains('Field_card_active__KDvwr')){
+                setShow({id:e.currentTarget.id})
+                const interval= setInterval(() => {
+                    setShow({})
+                },800)
+            }
     }
   return (
     <div className={styles.field}>
@@ -25,18 +23,7 @@ const Gamefield = () => {
             <div className={styles.game_field}>
                 <div className={styles.game_field_row}>
                     {cards.map((item,idx) => (
-                        <div onClick={handleClick} id={idx}>
-                         <div className={styles.content}>
-                             <div className={styles.back}>
-                                 <div className={styles.back_content}>
-                                     <strong>Hover Me</strong>
-                                 </div>
-                             </div>
-                             <div className={styles.front}>
-                                 <div className={styles.front_img}></div>
-                             </div>
-                         </div>
-                     </div>
+                        <Card item={item} isActive={idx == show.id} handleClick={handleClick} idx={idx} key={idx} image={item.img} />
                     ))}
                 </div>
             </div>

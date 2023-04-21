@@ -1,67 +1,34 @@
 export const cards = [
     {
-        name:'',
+        name:'banana',
         img:'',
     },
     {
-        name:'',
+        name:'watermelon',
         img:'',
     },
     {
-        name:'',
+        name:'cherry',
         img:'',
     },
     {
-        name:'',
+        name:'lemon',
         img:'',
     },
     {
-        name:'',
+        name:'banana',
         img:'',
     },
     {
-        name:'',
+        name:'watermelon',
         img:'',
     },
     {
-        name:'',
+        name:'cherry',
         img:'',
     },
     {
-        name:'',
+        name:'lemon',
         img:'',
     },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-    {
-        name:'',
-        img:'',
-    },
-
 ]
